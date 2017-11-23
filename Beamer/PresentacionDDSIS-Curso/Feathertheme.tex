@@ -1,0 +1,193 @@
+\documentclass[10pt]{beamer}
+\usetheme[
+%%% option passed to the outer theme
+%    progressstyle=fixedCircCnt,   % fixedCircCnt, movingCircCnt (moving is deault)
+  ]{Feather}
+  
+% If you want to change the colors of the various elements in the theme, edit and uncomment the following lines
+\definecolor{Accentlue}{RGB}{83,121,170}
+\definecolor{BackBlue}{RGB}{3, 42, 104}
+% Change the bar colors:
+\setbeamercolor{Feather}{fg=Accentlue,bg=BackBlue}
+
+% Change the color of the structural elements:
+%\setbeamercolor{structure}{fg=red}
+
+% Change the frame title text color:
+%\setbeamercolor{frametitle}{fg=blue}
+
+% Change the normal text color background:
+\setbeamercolor{normal text}{fg=black,bg=gray!10}
+\setbeamercolor{title}{fg=Accentlue}
+
+%-------------------------------------------------------
+% INCLUDE PACKAGES
+%-------------------------------------------------------
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,mexico]{babel}
+\def\spanishoptions{mexico,mexico-com}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\usepackage{graphicx} % Allows including images
+\graphicspath{ {imagenes/} }
+\usepackage{listings}
+
+
+%-------------------------------------------------------
+% DEFFINING AND REDEFINING COMMANDS
+%-------------------------------------------------------
+
+% colored hyperlinks
+\newcommand{\chref}[2]{
+  \href{#1}{{\usebeamercolor[bg]{Feather}#2}}
+}
+
+%-------------------------------------------------------
+% INFORMATION IN THE TITLE PAGE
+%-------------------------------------------------------
+
+\title[] % [] is optional - is placed on the bottom of the sidebar on every slide
+{ % is placed on the title page
+      \textbf{Web Services C\# .NET}
+}
+
+\subtitle[The Feather Beamer Theme]
+{
+      \textbf{v. 1.0.0}
+}
+
+\author[calrodriguez]
+{      Carlos Leonardo Rodríguez González \\
+      {\ttfamily carlos.leonardo.rodriguez@gmail.com}
+}
+
+\institute[]
+{
+      Desarrollo y Diseño de Sistemas\\
+      ``DDSIS''\\
+  
+  %there must be an empty line above this line - otherwise some unwanted space is added between the university and the country (I do not know why;( )
+}
+
+\date{\today}
+
+%-------------------------------------------------------
+% THE BODY OF THE PRESENTATION
+%-------------------------------------------------------
+
+\begin{document}
+
+%-------------------------------------------------------
+% THE TITLEPAGE
+%-------------------------------------------------------
+
+{\4% % this is the name of the PDF file for the background
+\begin{frame}[plain,noframenumbering] % the plain option removes the header from the title page, noframenumbering removes the numbering of this frame only
+  \titlepage % call the title page information from above
+\end{frame}}
+
+
+\begin{frame}{Contentenido}{}
+\tableofcontents
+\end{frame}
+
+%-------------------------------------------------------
+\section{Prerequisitos}
+%-------------------------------------------------------
+\subsection{Descargar elementos}
+\begin{frame}{Prerequisitos}{Descargar elementos}
+	%-------------------------------------------------------
+	\begin{itemize}
+		\item<1-> La \'{u}ltima versi\'{o}n disponible de Visual Studio es la 2017, existen diferentes distribuciones: Enterprise, Professional, Community, etc.
+		\item<2-> Para efectos prácticos se recomienda la distribución \chref{https://www.visualstudio.com/es/downloads/}{Community}. Tras 30 días de uso solicitará una licencia la cual puede ser ``obtenida'' a traves de una cuenta de microsoft indicando que se es desarrollador independiente.
+		\item<3-> Opcionales: Instalar \chref{https://www.microsoft.com/en-us/download/details.aspx?id=48264}{iis express}.
+	\end{itemize}
+\end{frame}
+%-------------------------------------------------------
+\subsection{Instalación}
+\begin{frame}{Prerequisitos}{Instalación}
+	%-------------------------------------------------------
+	\begin{itemize}
+		\item<1-> El asistente de instalción para Visual Studio es muy sencillo, sin embargo, para iniciar con el desarrollo hay que instalar ciertas herramientas para el desarrollo de Web Services.
+		\item<2-> Es importante seleccionar las siguientes.
+		\begin{enumerate}
+			\item .NET Desktop Development (Desarrollo de escritorio)
+			\item ASP.NET (Desarrollo de web).
+		\end{enumerate}
+		\item<3-> Opcionales: El instador de iis solo es necesario seguir el asistente.
+	\end{itemize}
+\end{frame}
+
+%-------------------------------------------------------
+\section{Web Service Básico}
+%-------------------------------------------------------
+\subsection{Crear proyecto}
+\begin{frame}{Web Service Básico}{Crear proyecto}
+	%-------------------------------------------------------
+	\begin{itemize}
+		\item<1-> Crear proyecto MiPrimerWS.
+		\item<1-> Selecccionar.
+	\end{itemize}
+\end{frame}
+%-------------------------------------------------------
+\subsection{Probar WS}
+\begin{frame}{Web Service Básico}{Probar WS}
+	Texto para probar WS
+\end{frame}
+%---------
+\begin{frame}{Web Service Básico}{Resultado de prueba}
+	Texto
+\end{frame}
+
+%-------------------------------------------------------
+\section{Web Service tipos complejos}
+\subsection{Contracts}
+\begin{frame}{Web Service tipos complejos}{Contracts}
+	%-------------------------------------------------------
+	Texto
+\end{frame}
+%--------------------------------
+%-------------------------------------------------------
+\section{Asegurar Web Service}
+\subsection{Tipos}
+\begin{frame}{Asegurar Web Service}{Tipos}
+	%-------------------------------------------------------
+	Texto
+\end{frame}
+\subsection{Ejemplo}
+\begin{frame}{Asegurar Web Service}{Ejemplo}
+	%-------------------------------------------------------
+	Texto
+\end{frame}
+%------------
+%-------------------------------------------------------
+\section{Cliente WebService}
+\subsection{Service Reference}
+\begin{frame}{Cliente WebService}{Service Reference}
+	%-------------------------------------------------------
+	Texto
+\end{frame}
+\subsection{Ejemplo}
+\begin{frame}{Cliente WebService}{Ejemplo}
+	%-------------------------------------------------------
+	Texto
+\end{frame}
+%------------
+%-------------------------------------------------------
+\section{Otros}
+\subsection{Base de datos}
+\begin{frame}{Otros}{Base de datos}
+	%-------------------------------------------------------
+	Texto
+\end{frame}
+\subsection{Otros}
+\begin{frame}{Cliente WebService}{Web Deploy}
+	%-------------------------------------------------------
+	Texto
+\end{frame}
+\begin{frame}[plain,noframenumbering]
+	\finalpage{DDIS $_{\text{\copyright}}$ }
+\end{frame}
+
+\end{document}
